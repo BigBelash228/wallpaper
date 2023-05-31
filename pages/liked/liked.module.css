@@ -1,0 +1,134 @@
+.topTaskbar {
+	height: 50px;
+	background: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2rem;
+	user-select: none;
+}
+
+.topTaskbar * {
+	cursor: pointer;
+}
+
+.images_holder {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	padding: 1rem;
+}
+
+.img_holder {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin: 5px;
+	position: relative;
+	user-select: none;
+}
+
+.img {
+	max-width: 200px;
+	max-height: 200px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.img:hover {
+	box-shadow: 0 0 15px 15px rgb(30, 30, 30);
+
+}
+
+.img.selectionMode {
+	filter: brightness(0.7);
+}
+
+.img.selectionMode:hover {
+	transform: scale(1);
+	box-shadow: none;
+
+}
+
+.countHolder.visible {
+	width: 20px;
+	height: 20px;
+	border: 2px solid white;
+	border-radius: 50%;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.trashHolder {
+	display: none;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	bottom: 30px;
+	right: 30px;
+	background: rgb(42, 42, 42);
+	filter: brightness(0.5);
+	border-radius: 50%;
+	padding: 1rem;
+	cursor: pointer;
+	transition: 0.2s;
+	pointer-events: none;
+}
+
+
+.trashHolder.visible {
+	display: flex;
+}
+
+.trashHolder.visible.active {
+	pointer-events: auto;
+	filter: brightness(1);
+}
+
+.trashHolder.visible.active:hover {
+	background: rgb(201, 1, 1);
+}
+
+.noImagesHolder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: -10;
+}
+
+@media (max-width: 500px) {
+	.img_holder {
+		width: 150px;
+		height: 150px;
+	}
+	.img {
+		max-width: 150px;
+		max-height: 150px;
+	}
+.images_holder {
+		padding: 0;
+	}
+}
+
+@media (max-width: 500px) {
+	.img_holder {
+		width: 120px;
+		height: 120px;
+	}
+	.img {
+		max-width: 120px;
+		max-height: 120px;
+	}
+}

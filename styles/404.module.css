@@ -1,0 +1,21 @@
+.content_holder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	flex-direction: column;
+	background: white;
+}
+
+.h1 {
+	color: rgb(165, 17, 17);
+}
+
+.content_holder a {
+	color: black;
+	text-decoration: underline;
+}
